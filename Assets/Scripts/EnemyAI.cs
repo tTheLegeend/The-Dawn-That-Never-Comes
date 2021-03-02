@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
     private Animator myAnim;
     private Transform target;
     public Transform homePos;
+    public GameObject die;
 
     [SerializeField]
     private float speed;
@@ -15,6 +16,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     private float minRange;
 
+    private int health = 100;
+    private float timePassed;
     void Start()
     {
         myAnim = GetComponent<Animator>();
@@ -51,6 +54,45 @@ public class EnemyAI : MonoBehaviour
         {
             myAnim.SetBool("isMoving", false);
         }
+
+        
     }
+
+    public void setHealth(int dmg)
+    {
+        if (health > dmg)
+        {
+            myAnim.SetTrigger("isHurt");
+            health = health - dmg;
+            Debug.Log("ouch");
+        }
+        else
+        {
+            
+                death();
+            
+        }
+    }
+
+    public void death()
+    {
+        myAnim.SetBool("isDead", true);
+        Destroy(gameObject);
+        GameObject death = Instantiate(die, transform.position, Quaternion.identity);
+        Destroy(death, .5f);
+        Debug.Log("death");
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            setHealth(20);
+        }
+
+    }
+
+
 }
 
