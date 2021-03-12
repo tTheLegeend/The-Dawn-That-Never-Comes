@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour
             if (Vector3.Distance(target.position, transform.position) <= attackRange)
             {
                 
-                target.GetComponent<Shooting>().Shoot(firePoint.position, firePoint.rotation);
+                target.GetComponent<Shooting>().Melee(firePoint.position, firePoint.rotation, firePoint);
                 nextAttackTime = Time.time + 1f / attackRate;
             }
 
