@@ -50,6 +50,7 @@ public class Shooting : MonoBehaviour
         }
     }
 
+    
 
     public void Shoot(Vector3 firePointPos, UnityEngine.Quaternion firePointRot, Transform firePointT)
     {
