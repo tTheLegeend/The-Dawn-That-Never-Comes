@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
     //public Animator animator;
 
     Vector2 movement;
-    
+
+    private int health = 100;
+
     void Update()
     {
         //input
@@ -26,6 +28,43 @@ public class PlayerMovement : MonoBehaviour
     {
         //movement
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+    }
+
+    public void setHealth(int dmg)
+    {
+        if (health > dmg)
+        {
+            //myAnim.SetTrigger("isHurt");
+            health = health - dmg;
+            Debug.Log("ouch");
+        }
+        else
+        {
+
+            death();
+
+        }
+    }
+
+    public void death()
+    {
+        Destroy(gameObject);
+
+        //myAnim.SetBool("isDead", true);
+
+        //GameObject death = Instantiate(die, transform.position, Quaternion.identity);
+        //Destroy(death, .5f);
+        Debug.Log("death");
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            setHealth(20);
+        }
 
     }
 }
