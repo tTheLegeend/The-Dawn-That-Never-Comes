@@ -9,6 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     //public Animator animator;
 
+    // Needed For Inventory
+    public Transform hand; 
+    public Transform body;
+    //~~~~~~~~~~~~~~~~~~~~
+
     Vector2 movement;
 
     private int health = 100;
