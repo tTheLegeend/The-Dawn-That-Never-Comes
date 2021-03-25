@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public SpriteRenderer sr;
-    public Sprite sprite; 
+    
     public Transform firePoint;
     public GameObject bulletPrefab;
 
@@ -23,9 +22,9 @@ public class Gun : MonoBehaviour
     [SerializeField]
     public int bulletsLeft;
 
-    void start() 
+    void awake() 
     {
-        sr.sprite = sprite;
+      
         bulletsLeft = ammo;
     
     }
