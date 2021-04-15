@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
     public Rigidbody2D rb;
+    public GameObject player;
     public Transform gun;
 
     public Camera cam;
@@ -20,13 +21,17 @@ public class Gun : MonoBehaviour
 
     public int ammo = 30;
     [SerializeField]
-    public int bulletsLeft;
+    private int bulletsLeft;
 
-    void awake() 
+    private bool reloading;
+
+    public bool allowButtonDown;
+
+    void Awake()
     {
-      
-        bulletsLeft = ammo;
-    
+        cam = FindObjectOfType<Camera>();
+        player = GameObject.Find("Player");
+        rb = player.GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -42,8 +47,18 @@ public class Gun : MonoBehaviour
         
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
         if (Time.time >= nextAttackTime)
         {
+
+            if (allowButtonDown)
+            {
+                if (Input.GetMouseButton(0) && bulletsLeft > 0)
+                {
+                    Shoot(firePoint.position, firePoint.rotation, firePoint);
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
+            }
 
             if (Input.GetMouseButtonDown(0) && bulletsLeft > 0)
             {
@@ -53,7 +68,11 @@ public class Gun : MonoBehaviour
            
 
         }
-        Reload();
+        if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < ammo && !reloading)
+        {
+            Reload();
+        }
+          
     }
     public void Shoot(Vector3 firePointPos, UnityEngine.Quaternion firePointRot, Transform firePointT)
     {
@@ -67,11 +86,8 @@ public class Gun : MonoBehaviour
     }
     private void Reload()
     {
-        if(Input.GetKeyDown("r"))
-        {
-            bulletsLeft = ammo;
-        }
-        
+
+        bulletsLeft = ammo;
 
     }
 }

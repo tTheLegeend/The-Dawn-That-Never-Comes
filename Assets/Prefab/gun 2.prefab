@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 2851315832101076367}
   - component: {fileID: 2851315832101076360}
   m_Layer: 0
-  m_Name: gun
+  m_Name: gun 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,14 +155,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2851315831315631752}
-  bulletPrefab: {fileID: 7002668867147638673, guid: f425a6e583b1c84459bd32b9a2008269,
+  bulletPrefab: {fileID: 3078194054053150145, guid: a1fa33d56f1acd84fa720c1708c55c11,
     type: 3}
-  bulletForce: 10
-  attackRate: 2
+  bulletForce: 5
+  attackRate: 10
   rb: {fileID: 0}
   gun: {fileID: 2851315832101076367}
   cam: {fileID: 0}
   mousePos: {x: 0, y: 0}
   ammo: 30
   bulletsLeft: 30
-  allowButtonDown: 0
+  allowButtonDown: 1

@@ -28,6 +28,10 @@ public class EnemyAI : MonoBehaviour
 
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
+    public GameObject bulletPrefab;
+
+    public GameObject meleePrefab;
+    public float bulletForce = 10f;
 
 
     void FixedUpdate()
@@ -53,8 +57,8 @@ public class EnemyAI : MonoBehaviour
 
             if (Vector3.Distance(target.position, transform.position) <= attackRange)
             {
-                
-                target.GetComponent<Shooting>().Melee(firePoint.position, firePoint.rotation, firePoint);
+
+                Shoot();
                 nextAttackTime = Time.time + 1f / attackRate;
             }
 
@@ -112,17 +116,25 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            setHealth(20);
-        }
+    
 
+
+    public void Shoot()
+    {
+        //GameObject flash = Instantiate(muzzle, firePoint.position, firePoint.rotation);
+        //Destroy(flash, .5f);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.transform.up * bulletForce, ForceMode2D.Impulse);
+        Destroy(bullet, 5f);
     }
 
-
-
+    public void Melee()
+    {
+        GameObject mAttack = Instantiate(meleePrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = mAttack.GetComponent<Rigidbody2D>();
+        Destroy(mAttack, 1f);
+    }
 
 }
 
