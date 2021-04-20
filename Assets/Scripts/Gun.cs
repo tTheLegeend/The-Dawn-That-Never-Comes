@@ -27,6 +27,9 @@ public class Gun : MonoBehaviour
 
     public bool allowButtonDown;
 
+    public int numberOfProj;
+    public float spread;
+
     void Awake()
     {
         cam = FindObjectOfType<Camera>();
@@ -78,11 +81,34 @@ public class Gun : MonoBehaviour
     {
         //GameObject flash = Instantiate(muzzle, firePoint.position, firePoint.rotation);
         //Destroy(flash, .5f);
-        GameObject bullet = Instantiate(bulletPrefab, firePointPos, firePointRot);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePointT.up * bulletForce, ForceMode2D.Impulse);
-        Destroy(bullet, 5f);
-        bulletsLeft--;
+        float j = spread;
+        UnityEngine.Quaternion firePointRot3;
+        UnityEngine.Quaternion firePointRot2 = firePointRot;
+        Vector3 rot;
+        for (int i = 0; i < numberOfProj; i++)
+        {
+            
+            rot = firePointRot2.eulerAngles;
+            rot = new Vector3(rot.x, rot.y, rot.z + j);
+            firePointRot3 = Quaternion.Euler(rot);
+            firePointT.rotation = firePointRot3;
+
+            GameObject bullet = Instantiate(bulletPrefab, firePointPos, firePointRot);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(firePointT.up * bulletForce, ForceMode2D.Impulse);
+            Destroy(bullet, 5f);
+            bulletsLeft--;
+            
+            Debug.Log(spread);
+            Debug.Log(rot);
+            Debug.Log(firePointRot);
+            
+            Debug.Log(j);
+            j -= spread;
+        }
+
+        firePointT.rotation = firePointRot;
+
     }
     private void Reload()
     {
