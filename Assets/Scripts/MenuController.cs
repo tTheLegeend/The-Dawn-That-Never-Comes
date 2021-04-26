@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-namespace SpeedTutorMainMenuSystem
+namespace MainMenu
 {
     public class MenuController : MonoBehaviour
     {
@@ -86,7 +86,7 @@ namespace SpeedTutorMainMenuSystem
                     ClickSound();
                 }
 
-                else if (menuNumber == 6) //CONTROLS MENU
+                else if (menuNumber == 6) //ControlsMenu
                 {
                     GoBackToGameplayMenu();
                     ClickSound();

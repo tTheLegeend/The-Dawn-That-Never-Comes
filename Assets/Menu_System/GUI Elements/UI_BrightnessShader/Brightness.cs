@@ -1,11 +1,11 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 
-
+[ExecuteInEditMode]
 [AddComponentMenu("Image Effects/Color Adjustments/Brightness")]
 public class Brightness : MonoBehaviour
 {
+
     /// Provides a shader property that is set in the inspector
     /// and a material instantiated from the shader
     public Shader shaderDerp;
@@ -28,6 +28,7 @@ public class Brightness : MonoBehaviour
         if (!shaderDerp || !shaderDerp.isSupported)
             enabled = false;
     }
+
 
     Material material
     {

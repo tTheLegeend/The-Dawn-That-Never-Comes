@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-namespace SpeedTutorMainMenuSystem
+namespace MainMenu
 {
     public class MenuController : MonoBehaviour
     {

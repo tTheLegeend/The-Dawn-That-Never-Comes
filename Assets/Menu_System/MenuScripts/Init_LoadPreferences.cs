@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MainMenu
+namespace SpeedTutorMainMenuSystem
 {
     public class Init_LoadPreferences : MonoBehaviour
     {
