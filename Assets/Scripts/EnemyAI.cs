@@ -33,6 +33,8 @@ public class EnemyAI : MonoBehaviour
     public GameObject meleePrefab;
     public float bulletForce = 10f;
 
+    public bool isRanged;
+
 
     void FixedUpdate()
     {
@@ -57,9 +59,16 @@ public class EnemyAI : MonoBehaviour
 
             if (Vector3.Distance(target.position, transform.position) <= attackRange)
             {
-
-                Shoot();
-                nextAttackTime = Time.time + 1f / attackRate;
+                if (isRanged)
+                {
+                    Shoot();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
+                else
+                {
+                    Melee();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
             }
 
         }
