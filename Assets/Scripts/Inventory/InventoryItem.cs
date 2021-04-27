@@ -30,14 +30,14 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IEndDragHandler, 
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = false;
-        rectTransform.localScale += new Vector3(0.5f, 0.5f, 0.5f);
+        rectTransform.localScale += new Vector3(0.5f, 0.5f);
         originalSlot = transform.parent.transform;
     } 
     public void OnEndDrag(PointerEventData eventData)
     {
         // Revert State //
         canvasGroup.blocksRaycasts = true;
-        rectTransform.localScale -= new Vector3(0.5f, 0.5f, 0.5f);
+        rectTransform.localScale -= new Vector3(0.5f, 0.5f);
         if (transform.parent == GameManager.Instance.draggables)
         {
             transform.SetParent(originalSlot);

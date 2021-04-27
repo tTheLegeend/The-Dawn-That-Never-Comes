@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public GameObject spawnedWeapon;
     public GameObject spawnedHeal;
 
-    public PlayerManager PM;
+    public PlayerMovement PM;
 
     public InventorySlot[] inventorySlots;
     public Canvas interfaceCanvas;
