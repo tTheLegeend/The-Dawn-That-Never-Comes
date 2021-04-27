@@ -28915,7 +28915,7 @@ GameObject:
   - component: {fileID: 1516364492}
   - component: {fileID: 1516364491}
   m_Layer: 0
-  m_Name: down_idle
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29001,6 +29001,7 @@ MonoBehaviour:
   rb: {fileID: 1516364492}
   hand: {fileID: 2039493000}
   body: {fileID: 863503324}
+  health: 100
 --- !u!61 &1516364491
 BoxCollider2D:
   m_ObjectHideFlags: 0
