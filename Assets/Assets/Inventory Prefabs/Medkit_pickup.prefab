@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5271782250654079826}
   - component: {fileID: 3122588847621456098}
   - component: {fileID: 6357169947133836473}
+  - component: {fileID: 7587776883567714411}
   m_Layer: 0
   m_Name: Medkit_pickup
   m_TagString: Untagged
@@ -106,3 +107,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 0.96}
   m_EdgeRadius: 0
+--- !u!114 &7587776883567714411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5665318936168632778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d73e13952d36a45937adffa44914ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 20
