@@ -110,8 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 876d15b7fec21ad41b8011c3042abdaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBullet: 1
   hitEffect: {fileID: 1718187362314184653, guid: f1389a8c19d4b3e45bc72a1ca717fb19,
     type: 3}
+  damage: 0
 --- !u!50 &4669576728446272023
 Rigidbody2D:
   serializedVersion: 4

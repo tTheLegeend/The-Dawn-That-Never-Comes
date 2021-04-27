@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     //~~~~~~~~~~~~~~~~~~~~
 
     Vector2 movement;
-
-    private int health = 100;
+    
+    public int health = 100;
 
     void Update()
     {
@@ -38,18 +38,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void setHealth(int dmg)
     {
-        if (health > dmg)
-        {
+        
             //myAnim.SetTrigger("isHurt");
-            health = health - dmg;
+            health = health + dmg;
             Debug.Log("ouch");
-        }
-        else
+
+        if (health < 0)
         {
-
             death();
-
         }
+
+        
     }
 
     public void death()
