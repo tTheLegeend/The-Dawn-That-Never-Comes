@@ -30,6 +30,7 @@ public class changeSceneCollision : MonoBehaviour
 
             {
                 other.transform.position = teleportTo.position;
+                bPressedF = false;
             }
 
             Debug.Log("Move Scene");
