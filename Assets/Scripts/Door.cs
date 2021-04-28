@@ -32,7 +32,6 @@ public class Door : MonoBehaviour
                 doorOpen = true;
 
                 theSR.sprite = house_outside_open;
-                //theSR.sprite.Scale = (Vector3.Scale(1.2f, 1.2f));
 
                 thePlayer.followingKey.gameObject.SetActive(false);
                 thePlayer.followingKey = null;
@@ -47,6 +46,7 @@ public class Door : MonoBehaviour
 
         if (doorOpen && Vector3.Distance(thePlayer.transform.position, transform.position) < 1f && Input.GetKeyDown(KeyCode.F))
         {
+
             Debug.Log("Move Scene");
         }
     }
