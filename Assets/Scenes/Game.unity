@@ -31027,6 +31027,7 @@ GameObject:
   - component: {fileID: 1516364490}
   - component: {fileID: 1516364492}
   - component: {fileID: 1516364491}
+  - component: {fileID: 1516364493}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -31043,7 +31044,7 @@ Transform:
   m_GameObject: {fileID: 1516364487}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.9, y: -0.49, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5037, y: 1.5037, z: 1.5037}
   m_Children:
   - {fileID: 2039493000}
   - {fileID: 863503324}
@@ -31112,6 +31113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1516364492}
+  animator: {fileID: 1516364493}
   hand: {fileID: 2039493000}
   body: {fileID: 863503324}
   health: 100
@@ -31162,6 +31164,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &1516364493
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516364487}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c50017884bd60740956e9af4686950e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1518291580
 GameObject:
   m_ObjectHideFlags: 0
@@ -34822,7 +34843,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1.294667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
