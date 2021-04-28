@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+
+    bool bPressedF = false;
+
     private PlayerMovement thePlayer;
 
     public SpriteRenderer theSR;
@@ -34,6 +37,17 @@ public class Door : MonoBehaviour
                 thePlayer.followingKey.gameObject.SetActive(false);
                 thePlayer.followingKey = null;
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            bPressedF = true;
+            Debug.Log("F was pressed");
+        }
+
+        if (doorOpen && Vector3.Distance(thePlayer.transform.position, transform.position) < 1f && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Move Scene");
         }
     }
 
