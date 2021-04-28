@@ -36,6 +36,14 @@ public class EnemyAI : MonoBehaviour
     public bool isRanged;
 
 
+    void Awake()
+    {
+        
+        target = GameObject.Find("Player").transform;
+       
+
+    }
+
     void FixedUpdate()
     {
         targetPosV2 = target.position;
@@ -145,5 +153,12 @@ public class EnemyAI : MonoBehaviour
         Destroy(mAttack, 1f);
     }
 
+    public void spawn(Transform spawnPos)
+    {
+        homePos = spawnPos;
+        Instantiate(gameObject, spawnPos.position, spawnPos.rotation);
+        
+        Debug.Log("spawned enemy");
+    }
 }
 
