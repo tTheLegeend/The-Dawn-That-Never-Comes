@@ -14,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     public Transform body;
     //~~~~~~~~~~~~~~~~~~~~
 
+    // Needed for Key 
+    public Transform keyFollowPoint;
+    public Key followingKey;
+
     Vector2 movement;
     
     public int health = 100;
