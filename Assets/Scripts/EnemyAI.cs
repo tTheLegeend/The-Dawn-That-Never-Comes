@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
     //Health System
     void start()
     {
-        health = MaxHitpoints;
+        MaxHitpoints = 100;
         HealthBar2.SetHealth(health, MaxHitpoints);
     }
 
