@@ -1924,6 +1924,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rb: {fileID: 1365251496}
+  animator: {fileID: 0}
   hand: {fileID: 318023547}
   body: {fileID: 122480440}
   health: 100
@@ -2310,12 +2311,12 @@ PrefabInstance:
     - target: {fileID: 306764952392353157, guid: 8326f88347d39d44db9ef698bf51e0ec,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -190
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 306764952392353157, guid: 8326f88347d39d44db9ef698bf51e0ec,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 28
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8326f88347d39d44db9ef698bf51e0ec, type: 3}
