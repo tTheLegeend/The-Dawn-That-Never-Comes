@@ -39,13 +39,13 @@ public class EnemyAI : MonoBehaviour
 
     //Health System
     public float MaxHitpoints = 5;
-    public HealthbarBehaviour HealthBar2;
+    public HealthBar2 HealthBar;
 
     //Health System
     void start()
     {
         MaxHitpoints = 100;
-        HealthBar2.SetHealth(health, MaxHitpoints);
+        HealthBar.SetHealth(health, MaxHitpoints);
     }
 
     void FixedUpdate()
