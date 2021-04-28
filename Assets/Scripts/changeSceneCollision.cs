@@ -26,13 +26,13 @@ public class changeSceneCollision : MonoBehaviour
     {
         if (other.name == "Player" && bPressedF == true)
         {
+            
             if (tag == string.Empty || other.CompareTag(tag))
 
             {
                 other.transform.position = teleportTo.position;
-                bPressedF = false;
             }
-
+            bPressedF = false;
             Debug.Log("Move Scene");
         }
     }
