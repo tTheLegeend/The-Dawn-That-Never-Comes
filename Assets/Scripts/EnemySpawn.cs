@@ -5,50 +5,59 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
 
-    private enum State
-    {
-        Idle,
-        Active,
-    }
+   
 
 
     [SerializeField]
-    private ColliderTrigger colliderTrigger;
+    private ColliderTrigger colliderTriggerForest;
     [SerializeField]
-    private EnemyAI[] enemySpawnArray;
+    private ColliderTrigger colliderTriggerCity;
+    [SerializeField]
+    private EnemyAI[] enemySpawnArrayForest;
+    [SerializeField]
+    private EnemyAI[] enemySpawnArrayCity;
+
+    public Transform[] enemySpawnPosArrayForest;
+    public Transform[] enemySpawnPosArrayCity;
+
+   
+
     
-    public Transform[] enemySpawnPosArray;
-
-    private State state;
-
-    private void Awake()
-    {
-        state = State.Idle;
-    }
     void Start()
     {
-        colliderTrigger.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
+        colliderTriggerForest.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
+        colliderTriggerCity.OnPlayerEnterTriggerCity += ColliderTrigger_OnPlayerEnterTriggerCity;
     }
 
    private void  ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
     {
-        if (state == State.Idle)
-        {
-            startBattle();
-        }
+        
+        
+            startBattle(enemySpawnPosArrayForest, enemySpawnArrayForest);
+            
+        
+    }
+
+    private void ColliderTrigger_OnPlayerEnterTriggerCity(object sender, System.EventArgs e)
+    {
+        
+        
+            startBattle(enemySpawnPosArrayCity, enemySpawnArrayCity);
+
+        
     }
     // Update is called once per frame
-   
 
-    void startBattle()
+
+    void startBattle(Transform[] enemySpawnPosArray, EnemyAI[] enemySpawnArray)
     {
-        state = State.Active;
+        
         foreach (EnemyAI enemy in enemySpawnArray)
         {
             int i = Random.Range(0, enemySpawnPosArray.Length);
             enemy.spawn(enemySpawnPosArray[i]);
         }
-        state = State.Active;
+        
 
     }
 }
