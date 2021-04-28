@@ -34399,7 +34399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1794914349}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.64, y: 31.44, z: 0}
+  m_LocalPosition: {x: -35.64, y: 31.44, z: -0.01}
   m_LocalScale: {x: 1.2103258, y: 1.2103258, z: 1.2103258}
   m_Children: []
   m_Father: {fileID: 1492889165}
@@ -34543,6 +34543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9124a08a60240074db5978d3f1495d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theSR: {fileID: 0}
+  house_outside_open: {fileID: 0}
+  doorOpen: 0
+  waitingToOpen: 0
 --- !u!61 &1794914356
 BoxCollider2D:
   m_ObjectHideFlags: 0
