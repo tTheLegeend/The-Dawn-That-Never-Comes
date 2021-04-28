@@ -107,13 +107,13 @@ public class EnemyAI : MonoBehaviour
 
     public void setHealth(int dmg)
     {
-        if (health > dmg)
-        {
+        
+        
             //myAnim.SetTrigger("isHurt");
-            health = health - dmg;
+            health = health + dmg;
             Debug.Log("ouch");
-        }
-        else
+        
+        if(health <= 0)
         {
 
             death();
