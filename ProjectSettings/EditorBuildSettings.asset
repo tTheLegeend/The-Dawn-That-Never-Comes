@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Home.unity
     guid: 5d8d8e03a1ff46e40b529457523d7036
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Neighboors.unity
-    guid: de8d3153d586b674f87ae1ef68a463a4
+    path: Assets/Scenes/Police Station.unity
+    guid: a0491ab48c5d4324a87a246c447c077e
   - enabled: 1
-    path: Assets/Scenes/City.unity
-    guid: 6d7c6fe88cd8ad540accda691b376267
+    path: Assets/Scenes/Game.unity
+    guid: 750175414e16b6d448963e6779f137d4
   m_configObjects: {}
