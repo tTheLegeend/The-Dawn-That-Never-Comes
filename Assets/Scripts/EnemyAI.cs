@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -35,6 +36,17 @@ public class EnemyAI : MonoBehaviour
 
     public bool isRanged;
 
+
+    //Health System
+    public float MaxHitpoints = 5;
+    public HealthbarBehaviour HealthBar2;
+
+    //Health System
+    void start()
+    {
+        health = MaxHitpoints;
+        HealthBar2.SetHealth(health, MaxHitpoints);
+    }
 
     void FixedUpdate()
     {
