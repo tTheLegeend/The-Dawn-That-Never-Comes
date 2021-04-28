@@ -22,15 +22,17 @@ public class EnemySpawn : MonoBehaviour
 
    
 
-    
+
     void Start()
     {
         colliderTriggerForest.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
         colliderTriggerCity.OnPlayerEnterTriggerCity += ColliderTrigger_OnPlayerEnterTriggerCity;
     }
 
-   private void  ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
+    
+    private void  ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
     {
+        
         
         
             startBattle(enemySpawnPosArrayForest, enemySpawnArrayForest);
@@ -51,11 +53,13 @@ public class EnemySpawn : MonoBehaviour
 
     void startBattle(Transform[] enemySpawnPosArray, EnemyAI[] enemySpawnArray)
     {
-        
+        int i = 0;
         foreach (EnemyAI enemy in enemySpawnArray)
         {
-            int i = Random.Range(0, enemySpawnPosArray.Length);
+            //int i = Random.Range(0, enemySpawnPosArray.Length);
+            
             enemy.spawn(enemySpawnPosArray[i]);
+             i ++;
         }
         
 
