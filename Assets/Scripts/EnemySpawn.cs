@@ -22,15 +22,17 @@ public class EnemySpawn : MonoBehaviour
 
    
 
-    
+
     void Start()
     {
         colliderTriggerForest.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
         colliderTriggerCity.OnPlayerEnterTriggerCity += ColliderTrigger_OnPlayerEnterTriggerCity;
     }
 
-   private void  ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
+    
+    private void  ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
     {
+        
         
         
             startBattle(enemySpawnPosArrayForest, enemySpawnArrayForest);
