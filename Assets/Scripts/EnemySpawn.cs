@@ -51,11 +51,13 @@ public class EnemySpawn : MonoBehaviour
 
     void startBattle(Transform[] enemySpawnPosArray, EnemyAI[] enemySpawnArray)
     {
-        
+        int i = 0;
         foreach (EnemyAI enemy in enemySpawnArray)
         {
-            int i = Random.Range(0, enemySpawnPosArray.Length);
+            //int i = Random.Range(0, enemySpawnPosArray.Length);
+            
             enemy.spawn(enemySpawnPosArray[i]);
+             i ++;
         }
         
 
