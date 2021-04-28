@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 57026db0c3b3b2a479e32513170b2a6a
+guid: 2cd75930f747eea44a1817ae341ef740
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1368716105806920913
-    second: down_walk_0
+      213: 6947908207949566423
+    second: Cars_0
   - first:
-      213: 7283098997157940314
-    second: down_walk_1
+      213: -592538902078482287
+    second: Cars_1
   - first:
-      213: 9159403248030579051
-    second: down_walk_2
+      213: -931598462713293962
+    second: Cars_2
   - first:
-      213: -2266800645913114903
-    second: down_walk_3
+      213: -6902476039500356962
+    second: Cars_3
   - first:
-      213: -263778519393721887
-    second: down_walk_4
+      213: 6946151450223818293
+    second: Cars_4
   - first:
-      213: -2775898041181912230
-    second: down_walk_5
+      213: -3726662394787163890
+    second: Cars_5
   - first:
-      213: -5576555373964259228
-    second: down_walk_6
+      213: -6396464122784453
+    second: Cars_6
   - first:
-      213: -8557257137185582156
-    second: down_walk_7
+      213: 3718694418777046212
+    second: Cars_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -87,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -108,7 +108,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: down_walk_0
+      name: Cars_0
       rect:
         serializedVersion: 2
         x: 0
@@ -116,20 +116,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1136b099fbd7caa42b101f9e5cb14891
-      internalID: -1368716105806920913
+      spriteID: c3b136fb54bbaca488b68ebb3265428a
+      internalID: 6947908207949566423
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: down_walk_1
+      name: Cars_1
       rect:
         serializedVersion: 2
         x: 128
@@ -137,20 +137,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 965ead8aa8363e5479910fdf02ad04f6
-      internalID: 7283098997157940314
+      spriteID: 242cf12566b274b46970e5961e0853ac
+      internalID: -592538902078482287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: down_walk_2
+      name: Cars_2
       rect:
         serializedVersion: 2
         x: 256
@@ -158,20 +158,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ca40f686508fb646a8f821be7924ad8
-      internalID: 9159403248030579051
+      spriteID: e0aef8f76546f544b8806ec83d8fc95a
+      internalID: -931598462713293962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: down_walk_3
+      name: Cars_3
       rect:
         serializedVersion: 2
         x: 0
@@ -179,20 +179,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ae467dfe399e8a42a98b933f3777e73
-      internalID: -2266800645913114903
+      spriteID: dd9c99326fe18164895740bb950f2dad
+      internalID: -6902476039500356962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: down_walk_4
+      name: Cars_4
       rect:
         serializedVersion: 2
         x: 128
@@ -200,20 +200,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d229c31ffd31d8248912014cf8722e1d
-      internalID: -263778519393721887
+      spriteID: e38a3c5693d6f7e40a08ffd953b3b1f7
+      internalID: 6946151450223818293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: down_walk_5
+      name: Cars_5
       rect:
         serializedVersion: 2
         x: 256
@@ -221,20 +221,20 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee1ad16a44bb86843bdd628199c95815
-      internalID: -2775898041181912230
+      spriteID: f25132ac11ba27744b0ccd9682b3e7cb
+      internalID: -3726662394787163890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: down_walk_6
+      name: Cars_6
       rect:
         serializedVersion: 2
         x: 0
@@ -242,35 +242,35 @@ TextureImporter:
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f171e97b7c79094d92ab9a55e74d8bf
-      internalID: -5576555373964259228
+      spriteID: 93ea976b2bc662a438e44931234d3686
+      internalID: -6396464122784453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: down_walk_7
+      name: Cars_7
       rect:
         serializedVersion: 2
         x: 128
-        y: 0
+        y: 1
         width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32b6b3ac98278994191bbf2570ecb364
-      internalID: -8557257137185582156
+      spriteID: a4e9e9aa110071846a7aa64ac4abaab5
+      internalID: 3718694418777046212
       vertices: []
       indices: 
       edges: []
@@ -278,7 +278,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 0eae37f6c85239a4ea6f935edf1aeafb
+    spriteID: 33a965e93f8b94043a93dfbc63a30191
     internalID: 0
     vertices: []
     indices: 
