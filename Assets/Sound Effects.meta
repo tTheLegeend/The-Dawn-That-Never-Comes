@@ -1,7 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c9c94976c7e749343a959381e4792350
 folderAsset: yes
 DefaultImporter:
+=======
+<<<<<<< HEAD:Assets/Scripts/Inventory/Game Manager.prefab.meta
+guid: 3bafce3f96317564dba542053c211bdb
+PrefabImporter:
+=======
+guid: 9a018d736e6bc374aba65401b90a594d
+folderAsset: yes
+DefaultImporter:
+>>>>>>> c661f3d55dc3dd0f99883a490c12e63cb688c94d:Assets/Sound Effects.meta
+>>>>>>> c661f3d55dc3dd0f99883a490c12e63cb688c94d
   externalObjects: {}
   userData: 
   assetBundleName: 
