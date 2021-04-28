@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb;
-    //public Animator animator;
+    public Animator animator;
 
     // Needed For Inventory
     public Transform hand; 
@@ -15,8 +15,8 @@ public class PlayerMovement : MonoBehaviour
     //~~~~~~~~~~~~~~~~~~~~
 
     Vector2 movement;
-
-    private int health = 100;
+    
+    public int health = 100;
 
     void Update()
     {
@@ -24,9 +24,9 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        //animator.SetFloat("Horizontal", movement.x);
-        //animator.SetFloat("Vertical", movement.y);
-        //animator.SetFloat("Speed", movement.sqrMagnitude);
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     void FixedUpdate()
@@ -38,18 +38,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void setHealth(int dmg)
     {
-        if (health > dmg)
-        {
+        
             //myAnim.SetTrigger("isHurt");
-            health = health - dmg;
+            health = health + dmg;
             Debug.Log("ouch");
-        }
-        else
+
+        if (health < 0)
         {
-
             death();
-
         }
+
+        
     }
 
     public void death()
@@ -64,12 +63,5 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            setHealth(20);
-        }
-
-    }
+    
 }

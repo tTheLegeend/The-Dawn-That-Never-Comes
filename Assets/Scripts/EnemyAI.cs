@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -28,7 +29,24 @@ public class EnemyAI : MonoBehaviour
 
     public float attackRate = 2f;
     private float nextAttackTime = 0f;
+    public GameObject bulletPrefab;
 
+    public GameObject meleePrefab;
+    public float bulletForce = 10f;
+
+    public bool isRanged;
+
+
+    //Health System
+    public float MaxHitpoints = 5;
+    public HealthbarBehaviour HealthBar2;
+
+    //Health System
+    void start()
+    {
+        MaxHitpoints = 100;
+        HealthBar2.SetHealth(health, MaxHitpoints);
+    }
 
     void FixedUpdate()
     {
@@ -43,7 +61,7 @@ public class EnemyAI : MonoBehaviour
         {
             followPlayer();
         }
-        else if(Vector3.Distance(target.position, transform.position) >= maxRange)
+        else if (Vector3.Distance(target.position, transform.position) >= maxRange)
         {
             GoHome();
         }
@@ -53,9 +71,16 @@ public class EnemyAI : MonoBehaviour
 
             if (Vector3.Distance(target.position, transform.position) <= attackRange)
             {
-                
-                target.GetComponent<Shooting>().Melee(firePoint.position, firePoint.rotation, firePoint);
-                nextAttackTime = Time.time + 1f / attackRate;
+                if (isRanged)
+                {
+                    Shoot();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
+                else
+                {
+                    Melee();
+                    nextAttackTime = Time.time + 1f / attackRate;
+                }
             }
 
         }
@@ -67,7 +92,7 @@ public class EnemyAI : MonoBehaviour
         //myAnim.SetFloat("MoveX", (target.position.x - transform.position.x));
         //myAnim.SetFloat("MoveY", (target.position.y - transform.position.y));
         transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-     
+
     }
 
     public void GoHome()
@@ -76,12 +101,12 @@ public class EnemyAI : MonoBehaviour
         //myAnim.SetFloat("MoveY", (homePos.position.y - transform.position.y));
         transform.position = Vector3.MoveTowards(transform.position, homePos.position, speed * Time.deltaTime);
 
-        if(Vector3.Distance(transform.position, homePos.position) == 0)
+        if (Vector3.Distance(transform.position, homePos.position) == 0)
         {
             //myAnim.SetBool("isMoving", false);
         }
 
-        
+
     }
 
     public void setHealth(int dmg)
@@ -112,17 +137,25 @@ public class EnemyAI : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            setHealth(20);
-        }
 
+
+
+    public void Shoot()
+    {
+        //GameObject flash = Instantiate(muzzle, firePoint.position, firePoint.rotation);
+        //Destroy(flash, .5f);
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.transform.up * bulletForce, ForceMode2D.Impulse);
+        Destroy(bullet, 5f);
     }
 
-
-
+    public void Melee()
+    {
+        GameObject mAttack = Instantiate(meleePrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = mAttack.GetComponent<Rigidbody2D>();
+        Destroy(mAttack, 1f);
+    }
 
 }
 
