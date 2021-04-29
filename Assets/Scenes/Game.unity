@@ -1140,9 +1140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9124a08a60240074db5978d3f1495d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 1375519245}
   theSR: {fileID: 71379401}
   house_outside_open: {fileID: 21300000, guid: 3602daeae957c20468f66221fff0e65c, type: 3}
-  doorOpen: 0
+  doorOpen1: 0
   waitingToOpen: 0
 --- !u!61 &71379400
 BoxCollider2D:
@@ -12950,9 +12951,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9124a08a60240074db5978d3f1495d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorOpen: {fileID: 0}
   theSR: {fileID: 1078463725}
   house_outside_open: {fileID: 21300000, guid: 3602daeae957c20468f66221fff0e65c, type: 3}
-  doorOpen: 0
+  doorOpen1: 0
   waitingToOpen: 0
 --- !u!61 &1078463724
 BoxCollider2D:

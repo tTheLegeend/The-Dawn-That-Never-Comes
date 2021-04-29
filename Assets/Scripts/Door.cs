@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+    public GameObject doorOpen;
 
     bool bPressedF = false;
 
@@ -12,12 +13,13 @@ public class Door : MonoBehaviour
     public SpriteRenderer theSR;
     public Sprite house_outside_open;
 
-    public bool doorOpen, waitingToOpen;
+    public bool doorOpen1, waitingToOpen;
 
     // Start is called before the first frame update
     void Start()
     {
         thePlayer = FindObjectOfType<PlayerMovement>();
+        doorOpen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,12 +31,13 @@ public class Door : MonoBehaviour
             {
                 waitingToOpen = false;
 
-                doorOpen = true;
+                doorOpen1 = true;
 
                 theSR.sprite = house_outside_open;
 
                 thePlayer.followingKey.gameObject.SetActive(false);
                 thePlayer.followingKey = null;
+                doorOpen.SetActive(true);
             }
         }
 
