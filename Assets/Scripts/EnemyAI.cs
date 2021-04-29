@@ -59,6 +59,7 @@ public class EnemyAI : MonoBehaviour
         }
         else if (Vector3.Distance(target.position, transform.position) >= maxRange)
         {
+
             GoHome();
         }
 
