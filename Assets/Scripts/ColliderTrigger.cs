@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ColliderTrigger : MonoBehaviour
 {
+    private GameObject musicObj;
+    private Music musicScript;
+
     public bool Tutorial;
     public bool forest;
     public bool city;
@@ -13,9 +16,13 @@ public class ColliderTrigger : MonoBehaviour
     public event EventHandler OnPlayerEnterTriggerForest;
     public event EventHandler OnPlayerEnterTriggerCity;
 
-    
 
-    
+    void Start()
+    {
+        musicObj = GameObject.Find("Music");
+    }
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
@@ -25,12 +32,15 @@ public class ColliderTrigger : MonoBehaviour
             Debug.Log("Player insider trigger");
             if(Tutorial)
             {
+                musicScript = musicObj.GetComponent<Music>();
+                musicScript.changeSong(2);
                 OnPlayerEnterTriggerTutorial?.Invoke(this, EventArgs.Empty);
             }
             if (forest)
             {
-                
-                        OnPlayerEnterTriggerForest?.Invoke(this, EventArgs.Empty);
+                musicScript = musicObj.GetComponent<Music>();
+                musicScript.changeSong(3);
+                OnPlayerEnterTriggerForest?.Invoke(this, EventArgs.Empty);
                     
                 
                 
@@ -38,6 +48,8 @@ public class ColliderTrigger : MonoBehaviour
             }
             if (city)
             {
+                musicScript = musicObj.GetComponent<Music>();
+                musicScript.changeSong(3);
                 OnPlayerEnterTriggerCity?.Invoke(this, EventArgs.Empty);
 
             }
