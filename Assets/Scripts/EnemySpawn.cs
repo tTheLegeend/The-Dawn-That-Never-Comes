@@ -48,7 +48,7 @@ public class EnemySpawn : MonoBehaviour
 
         
     }
-    // Update is called once per frame
+   
 
 
     void startBattle(Transform[] enemySpawnPosArray, EnemyAI[] enemySpawnArray)
