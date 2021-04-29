@@ -6,6 +6,7 @@ public class Door : MonoBehaviour
 {
     public GameObject doorOpen;
     public Sprite Correctkey;
+    public Collider2D CollisionBox;
 
     bool bPressedF = false;
 
@@ -41,6 +42,7 @@ public class Door : MonoBehaviour
                     thePlayer.followingKey.gameObject.SetActive(false);
                     thePlayer.followingKey = null;
                     doorOpen.SetActive(true);
+                    CollisionBox.isTrigger = true;
                 }
                 else if(thePlayer.followingKey != Correctkey)
                 {
