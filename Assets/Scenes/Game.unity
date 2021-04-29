@@ -1441,7 +1441,7 @@ MonoBehaviour:
   doorOpen: {fileID: 1375519245}
   Correctkey: {fileID: 6614747575886032176, guid: 6a5f3af7780fde84bbc0d6cc114a9210,
     type: 3}
-  CollisionBox: {fileID: 0}
+  CollisionBox: {fileID: 71379400}
   Lock: {fileID: 1044283571}
   theSR: {fileID: 71379401}
   Unlock_Sprite: {fileID: 21300000, guid: 3602daeae957c20468f66221fff0e65c, type: 3}
@@ -18905,7 +18905,7 @@ MonoBehaviour:
   doorOpen: {fileID: 1684276002}
   Correctkey: {fileID: 1095141833252711340, guid: 6a5f3af7780fde84bbc0d6cc114a9210,
     type: 3}
-  CollisionBox: {fileID: 0}
+  CollisionBox: {fileID: 1078463724}
   Lock: {fileID: 1894616540}
   theSR: {fileID: 1078463725}
   Unlock_Sprite: {fileID: 21300000, guid: 3602daeae957c20468f66221fff0e65c, type: 3}

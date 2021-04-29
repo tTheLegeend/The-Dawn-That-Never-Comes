@@ -170,7 +170,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 17.919998, y: 17.919998}
     newSize: {x: 18, y: 18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -196,17 +196,17 @@ MonoBehaviour:
   die: {fileID: 0}
   rb: {fileID: 8471052898902037350}
   look: {fileID: 8471052899202573391}
-  speed: 2
+  speed: 1
   maxRange: 5
   minRange: 1
   attackRange: 4
   firePoint: {fileID: 8471052897531084951}
   targetPosV2: {x: 0, y: 0}
-  attackRate: 2
+  attackRate: 1
   bulletPrefab: {fileID: 7002668867147638673, guid: d7c030861c76bb84f811e57925abafcd,
     type: 3}
   meleePrefab: {fileID: 0}
-  bulletForce: 10
+  bulletForce: 5
   isRanged: 1
 --- !u!95 &495616942205950246
 Animator:

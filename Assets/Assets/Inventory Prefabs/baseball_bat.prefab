@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3837235157935969816}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.08, y: -1.2, z: 0}
+  m_LocalPosition: {x: 0.08, y: -0.91, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 2001563832018377716}
@@ -197,5 +197,5 @@ MonoBehaviour:
   numberOfProj: 1
   spread: 0
   isRanged: 0
-  meleePrefab: {fileID: 2360342746005448228, guid: 8acacb71a667123408b658b23bdcd90f,
+  meleePrefab: {fileID: 2360342746005448228, guid: 75b2afe3eec2be24899931cadc26d48c,
     type: 3}
