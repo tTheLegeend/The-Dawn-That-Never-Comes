@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 4eadc8ff0c3a56d47b885b6648ba74fa
+guid: d4b1bcb3bef673d4d8724c931a80adb5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6819876260895165130
-    second: tentacle_monster_0
+      213: 8209215356731798955
+    second: tentacle monster_0
   - first:
-      213: -8078717118419444916
-    second: tentacle_monster_1
+      213: 4599513046916770580
+    second: tentacle monster_1
   - first:
-      213: -2850926463664289176
-    second: tentacle_monster_2
+      213: -1061633544094105206
+    second: tentacle monster_2
+  - first:
+      213: 2438111818044591391
+    second: tentacle monster_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -54,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1800
+  spritePixelsToUnits: 1792
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,13 +96,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tentacle_monster_0
+      name: tentacle monster_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
-        width: 192
-        height: 192
+        y: 1792
+        width: 1792
+        height: 1792
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,20 +110,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 251331f5510b5274485cbd3e0027f128
-      internalID: -6819876260895165130
+      spriteID: edb79869ef8909e41ac48318a889696f
+      internalID: 8209215356731798955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tentacle_monster_1
+      name: tentacle monster_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
-        width: 192
-        height: 192
+        x: 1792
+        y: 1792
+        width: 1792
+        height: 1792
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21d4ff237277a1746966471f5df8e868
-      internalID: -8078717118419444916
+      spriteID: 583e2e0c3ecbebd47a131c855a911a7e
+      internalID: 4599513046916770580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tentacle_monster_2
+      name: tentacle monster_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 192
+        width: 1792
+        height: 1792
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,8 +152,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c34409d1fe32cc348b7e1fb04a621850
-      internalID: -2850926463664289176
+      spriteID: 6d86028672f1f1745a3971458c74db84
+      internalID: -1061633544094105206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tentacle monster_3
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 1792
+        height: 1792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1863c17aee4cd4e8d58db72d3c6d7e
+      internalID: 2438111818044591391
       vertices: []
       indices: 
       edges: []
@@ -158,7 +182,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7d630404c4a859141b381ac0d800def8
+    spriteID: 2271ba01891cd4147b64c712c3983843
     internalID: 0
     vertices: []
     indices: 
