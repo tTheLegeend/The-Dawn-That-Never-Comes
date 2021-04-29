@@ -5,13 +5,14 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     public GameObject doorOpen;
+    public Sprite Correctkey;
 
     bool bPressedF = false;
 
     private PlayerMovement thePlayer;
 
     public SpriteRenderer theSR;
-    public Sprite house_outside_open;
+    public Sprite Unlock_Sprite;
 
     public bool doorOpen1, waitingToOpen;
 
@@ -29,16 +30,26 @@ public class Door : MonoBehaviour
         {
             if(Vector3.Distance(thePlayer.followingKey.transform.position, transform.position) <0.1f)
             {
-                waitingToOpen = false;
+                if(thePlayer.followingKey.sprite == Correctkey)
+                {
+                    waitingToOpen = false;
 
-                doorOpen1 = true;
+                    doorOpen1 = true;
 
-                theSR.sprite = house_outside_open;
+                    theSR.sprite = Unlock_Sprite;
 
-                thePlayer.followingKey.gameObject.SetActive(false);
-                thePlayer.followingKey = null;
-                doorOpen.SetActive(true);
+                    thePlayer.followingKey.gameObject.SetActive(false);
+                    thePlayer.followingKey = null;
+                    doorOpen.SetActive(true);
+                }
+                else if(thePlayer.followingKey != Correctkey)
+                {
+                    thePlayer.followingKey.followTarget = thePlayer.keyFollowPoint;
+                    Debug.Log("Wrong Key!");
+                }
+                
             }
+            
         }
 
         if (Input.GetKeyDown(KeyCode.F))
@@ -62,6 +73,8 @@ public class Door : MonoBehaviour
             {
                 thePlayer.followingKey.followTarget = transform;
                 waitingToOpen = true;
+
+           
             }
         }
     }
