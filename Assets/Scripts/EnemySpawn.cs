@@ -25,12 +25,12 @@ public class EnemySpawn : MonoBehaviour
 
     void Start()
     {
-        colliderTriggerForest.OnPlayerEnterTrigger += ColliderTrigger_OnPlayerEnterTrigger;
+        colliderTriggerForest.OnPlayerEnterTriggerForest += ColliderTrigger_OnPlayerEnterTriggerForest;
         colliderTriggerCity.OnPlayerEnterTriggerCity += ColliderTrigger_OnPlayerEnterTriggerCity;
     }
 
     
-    private void  ColliderTrigger_OnPlayerEnterTrigger(object sender, System.EventArgs e)
+    private void  ColliderTrigger_OnPlayerEnterTriggerForest(object sender, System.EventArgs e)
     {
         
         

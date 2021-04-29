@@ -10,7 +10,7 @@ public class ColliderTrigger : MonoBehaviour
     public bool city;
 
     public event EventHandler OnPlayerEnterTriggerTutorial;
-    public event EventHandler OnPlayerEnterTrigger;
+    public event EventHandler OnPlayerEnterTriggerForest;
     public event EventHandler OnPlayerEnterTriggerCity;
 
     
@@ -18,9 +18,10 @@ public class ColliderTrigger : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        
         if (collision.gameObject.CompareTag("Player"))
         {
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             Debug.Log("Player insider trigger");
             if(Tutorial)
             {
@@ -29,7 +30,7 @@ public class ColliderTrigger : MonoBehaviour
             if (forest)
             {
                 
-                        OnPlayerEnterTrigger?.Invoke(this, EventArgs.Empty);
+                        OnPlayerEnterTriggerForest?.Invoke(this, EventArgs.Empty);
                     
                 
                 
