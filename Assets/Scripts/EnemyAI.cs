@@ -48,7 +48,7 @@ public class EnemyAI : MonoBehaviour
     {
         targetPosV2 = target.position;
         Vector2 lookDir = targetPosV2 - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         look.eulerAngles = new Vector3(0, 0, angle);
     }
     void Update()
@@ -139,6 +139,7 @@ public class EnemyAI : MonoBehaviour
 
     public void Shoot()
     {
+        Debug.Log("shoot");
         //GameObject flash = Instantiate(muzzle, firePoint.position, firePoint.rotation);
         //Destroy(flash, .5f);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
