@@ -23,12 +23,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471052897531084950}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8471052898902037369}
-  m_RootOrder: 1
+  m_Father: {fileID: 8471052899202573391}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8471052898902037349
 GameObject:
@@ -59,11 +59,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471052898902037349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.8, y: -3.42, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.05, z: 1}
   m_Children:
   - {fileID: 8471052899202573391}
-  - {fileID: 8471052897531084951}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,14 +194,14 @@ MonoBehaviour:
   die: {fileID: 0}
   rb: {fileID: 8471052898902037350}
   look: {fileID: 8471052899202573391}
-  speed: 4
+  speed: 2
   maxRange: 5
   minRange: 1
   attackRange: 4
   firePoint: {fileID: 8471052897531084951}
   targetPosV2: {x: 0, y: 0}
   attackRate: 2
-  bulletPrefab: {fileID: 3078194054053150145, guid: a1fa33d56f1acd84fa720c1708c55c11,
+  bulletPrefab: {fileID: 7002668867147638673, guid: d7c030861c76bb84f811e57925abafcd,
     type: 3}
   meleePrefab: {fileID: 0}
   bulletForce: 10
@@ -230,10 +229,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8471052899202573390}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 8471052897531084951}
   m_Father: {fileID: 8471052898902037369}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
