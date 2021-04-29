@@ -25,17 +25,14 @@ public class Music : MonoBehaviour
             switch (songNumber)
             {
                 case 1:
-                    audioData.Stop();
                     audioData.PlayOneShot(battle, 0.7f);
                     temp = 1;
                     break;
                 case 2:
-                    audioData.Stop();
                     audioData.PlayOneShot(calmMusic, 0.7f);
                     temp = 2;
                     break;
                 case 3:
-                    audioData.Stop();
                     audioData.PlayOneShot(nightTime, 0.7f);
                     temp = 3;
                     break;
@@ -44,10 +41,5 @@ public class Music : MonoBehaviour
                     break;
             }
         }
-    }
-
-    public void changeSong(int songChoice)
-    {
-        songNumber = songChoice;
     }
 }

@@ -20,7 +20,7 @@ public class EnemyAI : MonoBehaviour
     private float minRange;
     [SerializeField]
     private float attackRange;
-    [SerializeField]
+
     private int health = 100;
 
     public Transform firePoint;
@@ -37,7 +37,6 @@ public class EnemyAI : MonoBehaviour
     public bool isRanged;
 
 
-<<<<<<< HEAD
     //Health System
     public float MaxHitpoints = 5;
     public HealthBar2 HealthBar;
@@ -47,21 +46,13 @@ public class EnemyAI : MonoBehaviour
     {
         MaxHitpoints = 100;
         HealthBar.SetHealth(health, MaxHitpoints);
-=======
-    void Awake()
-    {
-        
-        target = GameObject.Find("Player").transform;
-       
-
->>>>>>> main
     }
 
     void FixedUpdate()
     {
         targetPosV2 = target.position;
         Vector2 lookDir = targetPosV2 - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg + 90f;
         look.eulerAngles = new Vector3(0, 0, angle);
     }
     void Update()
@@ -72,7 +63,6 @@ public class EnemyAI : MonoBehaviour
         }
         else if (Vector3.Distance(target.position, transform.position) >= maxRange)
         {
-
             GoHome();
         }
 
@@ -121,13 +111,13 @@ public class EnemyAI : MonoBehaviour
 
     public void setHealth(int dmg)
     {
-        
-        
+        if (health > dmg)
+        {
             //myAnim.SetTrigger("isHurt");
-            health = health + dmg;
+            health = health - dmg;
             Debug.Log("ouch");
-        
-        if(health <= 0)
+        }
+        else
         {
 
             death();
@@ -152,13 +142,12 @@ public class EnemyAI : MonoBehaviour
 
     public void Shoot()
     {
-        Debug.Log("shoot");
         //GameObject flash = Instantiate(muzzle, firePoint.position, firePoint.rotation);
         //Destroy(flash, .5f);
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.transform.up * bulletForce, ForceMode2D.Impulse);
-        Destroy(bullet, 3f);
+        Destroy(bullet, 5f);
     }
 
     public void Melee()
@@ -168,12 +157,5 @@ public class EnemyAI : MonoBehaviour
         Destroy(mAttack, 1f);
     }
 
-    public void spawn(Transform spawnPos)
-    {
-        homePos = spawnPos;
-        Instantiate(gameObject, spawnPos.position, spawnPos.rotation);
-        
-        Debug.Log("spawned enemy");
-    }
 }
 

@@ -124,7 +124,7 @@ public class Gun : MonoBehaviour
             GameObject bullet = Instantiate(bulletPrefab, firePointPos, firePointRot);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePointT.up * bulletForce, ForceMode2D.Impulse);
-            Destroy(bullet, 3f);
+            Destroy(bullet, 5f);
             bulletsLeft--;
 
             Debug.Log(spread);

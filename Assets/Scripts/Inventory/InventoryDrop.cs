@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 
 public class InventoryDrop : MonoBehaviour, IDropHandler
 {
-    
-
     public void OnDrop(PointerEventData eventData)
     {
         if (eventData.pointerDrag != null)
@@ -40,9 +38,5 @@ public class InventoryDrop : MonoBehaviour, IDropHandler
                 GameManager.Instance.DropItem(newItem);
             }
         }
-        
     }
-  
-
-
 }

@@ -6,13 +6,13 @@ public class Heal : MonoBehaviour
 {
     public int hp;
     private GameObject player;
-    private GameObject gameHealSlot;
-    private Transform gameHealItem;
+
     void Awake()
     {
         
         player = GameObject.Find("Player");
-        gameHealSlot = GameObject.Find("Heal Slot");
+        
+
     }
 
 
@@ -35,18 +35,7 @@ public class Heal : MonoBehaviour
     public void AddHP()
     {
         player.GetComponent<PlayerMovement>().setHealth(hp);
-
         Destroy(gameObject);
-        gameHealItem = gameHealSlot.transform.GetChild(0);
-        InventorySlot healSlot = GameManager.Instance.inventorySlots[1];
-        InventoryItem healItem = GameManager.Instance.inventorySlots[1].currentItem;
-        healSlot.currentItem = null;
-        healSlot.isFull = false;
-        GameManager.Instance.healID = -1;
-        GameManager.Instance.DestroyHeal();
-        Destroy(gameHealItem.gameObject);
-        Destroy(healItem);
-
     }
 }
 

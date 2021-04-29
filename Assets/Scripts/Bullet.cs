@@ -9,13 +9,13 @@ public class Bullet : MonoBehaviour
     public int damage;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") && playerBullet)
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             
                 collision.collider.GetComponent<EnemyAI>().setHealth(-damage);
             
         }
-        if(collision.gameObject.CompareTag("Player") && !playerBullet)
+        if(collision.gameObject.CompareTag("Player"))
         {
             
                 collision.collider.GetComponent<PlayerMovement>().setHealth(-damage);
@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
 
             }
         }
-        
+
     }
 
 }
