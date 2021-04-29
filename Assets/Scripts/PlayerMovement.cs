@@ -14,10 +14,20 @@ public class PlayerMovement : MonoBehaviour
     public Transform body;
     //~~~~~~~~~~~~~~~~~~~~
 
+    // Needed for Key 
+    public Transform keyFollowPoint;
+    public Key followingKey;
+
     Vector2 movement;
     
     public int health = 100;
 
+    public Canvas gameOver;
+
+    private void Start()
+    {
+        gameOver.gameObject.SetActive(false);
+    }
     void Update()
     {
         //input
@@ -53,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void death()
     {
-        Destroy(gameObject);
+        gameOver.gameObject.SetActive(true);
 
         //myAnim.SetBool("isDead", true);
 

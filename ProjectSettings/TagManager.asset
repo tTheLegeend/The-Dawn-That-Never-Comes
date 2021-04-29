@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -50,4 +51,13 @@ TagManager:
     locked: 0
   - name: 3
     uniqueID: 1533475761
+    locked: 0
+  - name: Environment
+    uniqueID: 1107585535
+    locked: 0
+  - name: Scenery
+    uniqueID: 1249456779
+    locked: 0
+  - name: PlayerEnemies
+    uniqueID: 4204367685
     locked: 0
