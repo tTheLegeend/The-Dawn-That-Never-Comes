@@ -19,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     private float minRange;
     [SerializeField]
     private float attackRange;
-
+    [SerializeField]
     private int health = 100;
 
     public Transform firePoint;
@@ -145,7 +145,7 @@ public class EnemyAI : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.transform.up * bulletForce, ForceMode2D.Impulse);
-        Destroy(bullet, 5f);
+        Destroy(bullet, 3f);
     }
 
     public void Melee()

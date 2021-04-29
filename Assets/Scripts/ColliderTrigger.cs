@@ -11,10 +11,12 @@ public class ColliderTrigger : MonoBehaviour
     public bool Tutorial;
     public bool forest;
     public bool city;
+    public bool park;
 
     public event EventHandler OnPlayerEnterTriggerTutorial;
     public event EventHandler OnPlayerEnterTriggerForest;
     public event EventHandler OnPlayerEnterTriggerCity;
+    public event EventHandler OnPlayerEnterTriggerPark;
 
 
     void Start()
@@ -52,6 +54,12 @@ public class ColliderTrigger : MonoBehaviour
                 musicScript.changeSong(3);
                 OnPlayerEnterTriggerCity?.Invoke(this, EventArgs.Empty);
 
+            }
+            if(park)
+            {
+                musicScript = musicObj.GetComponent<Music>();
+                musicScript.changeSong(3);
+                OnPlayerEnterTriggerPark?.Invoke(this, EventArgs.Empty);
             }
 
         }
