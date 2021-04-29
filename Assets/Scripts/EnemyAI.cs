@@ -37,16 +37,6 @@ public class EnemyAI : MonoBehaviour
     public bool isRanged;
 
 
-    //Health System
-    public float MaxHitpoints = 5;
-    public HealthBar2 HealthBar;
-
-    //Health System
-    void start()
-    {
-        MaxHitpoints = 100;
-        HealthBar.SetHealth(health, MaxHitpoints);
-    }
 
     void FixedUpdate()
     {
