@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     public GameObject doorOpen;
     public Sprite Correctkey;
     public Collider2D CollisionBox;
+    public GameObject Lock;
 
     bool bPressedF = false;
 
@@ -22,6 +23,7 @@ public class Door : MonoBehaviour
     {
         thePlayer = FindObjectOfType<PlayerMovement>();
         doorOpen.SetActive(false);
+        Lock.SetActive(true);
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class Door : MonoBehaviour
                     doorOpen1 = true;
 
                     theSR.sprite = Unlock_Sprite;
+                    Lock.SetActive(false);
 
                     thePlayer.followingKey.gameObject.SetActive(false);
                     thePlayer.followingKey = null;
