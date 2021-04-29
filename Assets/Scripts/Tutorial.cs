@@ -48,7 +48,7 @@ public class Tutorial : MonoBehaviour
         canvas.gameObject.SetActive(true);
         Debug.Log("tutorial");
 
-        text.text = "Press e to pick up weapon";
+        text.text = "Go pick up that baseball bat. Press e to pick it up ";
 
 
     }
@@ -60,7 +60,7 @@ public class Tutorial : MonoBehaviour
 
     public void part3()
     {
-        text.text = "gj";
+        text.text = "Now Press F at the door to leave. Good Luck...";
         startTimer = true;
     }
 }
