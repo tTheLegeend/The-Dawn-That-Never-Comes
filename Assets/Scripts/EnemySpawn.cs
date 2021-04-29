@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-
+    private GameObject musicObj;
+    private Music musicScript;
    
 
 
@@ -27,6 +28,8 @@ public class EnemySpawn : MonoBehaviour
     {
         colliderTriggerForest.OnPlayerEnterTriggerForest += ColliderTrigger_OnPlayerEnterTriggerForest;
         colliderTriggerCity.OnPlayerEnterTriggerCity += ColliderTrigger_OnPlayerEnterTriggerCity;
+
+        musicObj = GameObject.Find("Music");
     }
 
     
@@ -36,8 +39,10 @@ public class EnemySpawn : MonoBehaviour
         
         
             startBattle(enemySpawnPosArrayForest, enemySpawnArrayForest);
-            
-        
+
+
+        musicScript = musicObj.GetComponent<Music>();
+        musicScript.changeSong(1);
     }
 
     private void ColliderTrigger_OnPlayerEnterTriggerCity(object sender, System.EventArgs e)
@@ -46,7 +51,8 @@ public class EnemySpawn : MonoBehaviour
         
             startBattle(enemySpawnPosArrayCity, enemySpawnArrayCity);
 
-        
+        musicScript = musicObj.GetComponent<Music>();
+        musicScript.changeSong(1);
     }
    
 
