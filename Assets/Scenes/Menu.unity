@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b538d13850045d428d62aa621861bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newLevel: City
+  newLevel: Game
 --- !u!4 &922812146
 Transform:
   m_ObjectHideFlags: 0
@@ -908,7 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b538d13850045d428d62aa621861bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newLevel: City
+  newLevel: Game
 --- !u!114 &1369607868
 MonoBehaviour:
   m_ObjectHideFlags: 0
