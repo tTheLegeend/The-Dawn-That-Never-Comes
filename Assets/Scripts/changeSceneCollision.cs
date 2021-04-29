@@ -26,23 +26,24 @@ public class changeSceneCollision : MonoBehaviour
     {
         if (other.name == "Player" && bPressedF == true)
         {
+            
             if (tag == string.Empty || other.CompareTag(tag))
 
             {
                 other.transform.position = teleportTo.position;
             }
-                
+            bPressedF = false;
             Debug.Log("Move Scene");
         }
     }
 }
 
-public class TeleportTrigger : MonoBehaviour
-{
-    public enum TriggerType 
-    { 
-        Enter, Exit 
-    };
+//public class TeleportTrigger : MonoBehaviour
+//{
+//    public enum TriggerType
+//    {
+//        Enter, Exit
+//    };
 
 
 
@@ -66,4 +67,4 @@ public class TeleportTrigger : MonoBehaviour
     //    if (tag == string.Empty || other.CompareTag(tag))
     //        other.transform.position = teleportTo.position;
     //}
-}
+    //}
