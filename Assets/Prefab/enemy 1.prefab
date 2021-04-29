@@ -200,7 +200,7 @@ MonoBehaviour:
   maxRange: 10
   minRange: 9.9
   attackRange: 10
-  health: 500
+  health: 1000
   firePoint: {fileID: 8471052897531084951}
   targetPosV2: {x: 0, y: 0}
   attackRate: 0.5
