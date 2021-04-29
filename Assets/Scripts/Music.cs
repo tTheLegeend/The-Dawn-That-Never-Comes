@@ -42,4 +42,9 @@ public class Music : MonoBehaviour
             }
         }
     }
+
+    public void changeSong(int choiceNumber)
+    {
+        songNumber = choiceNumber;
+    }
 }
